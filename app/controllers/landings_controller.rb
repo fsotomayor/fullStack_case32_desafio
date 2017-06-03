@@ -1,4 +1,6 @@
 class LandingsController < ApplicationController
+  before_action :loquesea, only: :z
+
   def x
   end
 
@@ -11,4 +13,10 @@ class LandingsController < ApplicationController
   		@val << "nombre#{i+1}"
   	end
   end
+
+  private
+  def loquesea
+  	@mensaje = "Yo estoy en un callbck"
+  end
+
 end
